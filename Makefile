@@ -25,3 +25,7 @@ clean:
 .PHONY: test
 test: env
 	pytest tests/
+
+.PHONY: check
+check: env
+	env/bin/flake8 .
