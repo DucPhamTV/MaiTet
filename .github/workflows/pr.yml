@@ -1,0 +1,29 @@
+name: PR tests
+
+on: [pull_request]
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.7, 3.8, 3.9]
+
+    name: Testing Python ${{ matrix.python-version }}
+    container: python:${{ matrix.python-version }}
+    steps:
+    - uses: actions/checkout@v2
+    - name:  Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        make init env
+    - name: Lint with flake8
+      run: |
+        make check
+    - name: Test with pytest
+      run: |
+        make test
