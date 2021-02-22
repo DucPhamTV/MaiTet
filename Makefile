@@ -1,25 +1,31 @@
 PYTHON_PACKAGE_NAME = MaiTet
 
-VIRTUALENV ?= env
 PYTHONVERSION ?= python3
-PYTHON = $(VIRTUALENV)/bin/$(PYTHONVERSION)
+PYTHON = env/bin/$(PYTHONVERSION)
 
 .PHONY: init
 init: requirements/development.in
-	find requirements/ -name '*.txt' -type f -delete
-	$(PYTHONVERSION) -m venv $(VIRTUALENV)
-	. "$(VIRTUALENV)/bin/activate"
-	$(VIRTUALENV)/bin/pip install pip-tools
-	$(VIRTUALENV)/bin/pip-compile -v -o requirements/development.txt requirements/development.in
+	$(PYTHONVERSION) -m venv env
+	env/bin/pip install pip-tools
 
-$(VIRTUALENV): requirements/development.txt
+.PHONY: requirements
+requirement:
+	find requirements/ -name '*.txt' -type f -delete
+	env/bin/pip-compile -v -o requirements/development.txt requirements/development.in
+
+.PHONY: env
+env: requirements/development.txt
 	$(PYTHON) -m pip install -r $<
 
 .PHONY: clean
 clean:
 	find . -name "*.py[co]" -delete
-	rm -r $(VIRTUALENV)
+	rm -r env
 
 .PHONY: test
-test: $(VIRTUALENV)
+test: env
 	pytest tests/
+
+.PHONY: check
+check: env
+	env/bin/flake8 .
