@@ -3,19 +3,15 @@ PYTHON_PACKAGE_NAME = MaiTet
 PYTHONVERSION ?= python3
 PYTHON = env/bin/$(PYTHONVERSION)
 
-.PHONY: init
-init: requirements/development.in
+env:
 	$(PYTHONVERSION) -m venv env
 	env/bin/pip install pip-tools
+	$(PYTHON) -m pip install -r requirements/development.txt
 
 .PHONY: requirements
 requirement:
 	find requirements/ -name '*.txt' -type f -delete
 	env/bin/pip-compile -v -o requirements/development.txt requirements/development.in
-
-.PHONY: env
-env: requirements/development.txt
-	$(PYTHON) -m pip install -r $<
 
 .PHONY: clean
 clean:
@@ -24,7 +20,7 @@ clean:
 
 .PHONY: test
 test: env
-	pytest tests/
+	env/bin/pytest .
 
 .PHONY: check
 check: env
