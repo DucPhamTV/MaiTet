@@ -35,6 +35,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'v1.users',
     'v1.items',
+    'v1.comments',
+    'v1.addresses',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
