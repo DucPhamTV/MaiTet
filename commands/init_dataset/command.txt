@@ -1,0 +1,1 @@
+python manage.py dumpdata --indent 4  --exclude=auth --exclude=contenttypes --exclude=admin --exclude=sessions > commands/init_dataset/data.json
