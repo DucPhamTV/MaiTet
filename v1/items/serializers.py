@@ -5,5 +5,5 @@ from v1.items.models import Item
 
 class ItemSerializer(HyperlinkedModelSerializer):
     class Meta:
-         model = Item
-         fields = '__all__'
+        model = Item
+        fields = '__all__'

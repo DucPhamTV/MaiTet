@@ -7,7 +7,7 @@ class AddressSerializer(ModelSerializer):
     province = StringRelatedField()
     district = StringRelatedField()
     ward = StringRelatedField()
+
     class Meta:
         model = Address
         fields = '__all__'
-

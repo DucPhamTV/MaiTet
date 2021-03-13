@@ -1,20 +1,21 @@
-
+from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
-from v1.users.views import UserViewSet
-from v1.items.views import ItemViewSet
-from v1.comments.views import CommentViewSet
-from v1.addresses.views import AddressViewSet
+from v1.users.urls import router as user_router
+from v1.items.urls import router as item_router
+from v1.comments.urls import router as comment_router
+from v1.addresses.urls import router as address_router
 
 router = routers.DefaultRouter()
-router.register(r'users', UserViewSet)
-router.register(r'items', ItemViewSet)
-router.register(r'comments', CommentViewSet)
-router.register(r'addresses', AddressViewSet)
+router.registry.extend(user_router.registry)
+router.registry.extend(item_router.registry)
+router.registry.extend(comment_router.registry)
+router.registry.extend(address_router.registry)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]
