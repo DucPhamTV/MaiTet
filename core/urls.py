@@ -4,11 +4,13 @@ from rest_framework import routers
 from v1.users.views import UserViewSet
 from v1.items.views import ItemViewSet
 from v1.comments.views import CommentViewSet
+from v1.addresses.views import AddressViewSet
 
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 router.register(r'items', ItemViewSet)
 router.register(r'comments', CommentViewSet)
+router.register(r'addresses', AddressViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.

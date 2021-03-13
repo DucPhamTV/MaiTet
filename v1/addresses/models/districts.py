@@ -5,6 +5,7 @@ from .provinces import Province
 
 class District(CreatedModified):
     name = models.CharField(max_length=50)
+    description = models.TextField(blank=True, null=True)
     province = models.ForeignKey(
         Province, related_name='%(class)s_province',
         on_delete=models.CASCADE, blank=True, null=True)
