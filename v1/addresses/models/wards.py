@@ -12,6 +12,7 @@ class Ward(CreatedModified):
     district = models.ForeignKey(
         District, related_name='%(class)s_district',
         on_delete=models.CASCADE, blank=True, null=True)
+    description = models.TextField(blank=True, null=True)
 
     def __str__(self):
         return self.name

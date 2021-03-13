@@ -17,3 +17,6 @@ class User(AbstractUser):
         choices=GenderChoices,
         null=True
     )
+
+    class Meta:
+        ordering = ['username']
