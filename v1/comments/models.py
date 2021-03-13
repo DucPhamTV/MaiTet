@@ -13,3 +13,6 @@ class Comment(CreatedModified):
         Item, related_name='for_item',
         on_delete=models.CASCADE, blank=True, null=True)
     text = models.TextField()
+
+    class Meta:
+        ordering = ['-created_date']

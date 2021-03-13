@@ -6,4 +6,4 @@ from v1.items.models import Item
 class ItemSerializer(HyperlinkedModelSerializer):
     class Meta:
          model = Item
-         exclude = ['address']
+         fields = '__all__'
