@@ -33,7 +33,9 @@ django==3.1.7
     #   djangorestframework
     #   djangorestframework-simplejwt
 djangorestframework-simplejwt==4.6.0
-    # via djoser
+    # via
+    #   -r requirements/base.in
+    #   djoser
 djangorestframework==3.12.2
     # via
     #   -r requirements/base.in

@@ -24,4 +24,5 @@ urlpatterns = [
     #path('auth/', include('djoser.urls.authtoken')),
     url(r'^authen/', include('djoser.urls')),
     url(r'^authen/', include('djoser.urls.authtoken')),
+    url(r'^authen/', include('djoser.urls.jwt')),
 ]
