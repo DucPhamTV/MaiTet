@@ -1,2 +1,4 @@
 djangorestframework
 python-dotenv
+djoser
+djangorestframework-simplejwt

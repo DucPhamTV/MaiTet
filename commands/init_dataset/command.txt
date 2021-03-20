@@ -1,1 +1,4 @@
+# Dump data
 python manage.py dumpdata --indent 4  --exclude=auth --exclude=contenttypes --exclude=admin --exclude=sessions > commands/init_dataset/data.json
+# Load data
+python manage.py loaddata commands/init_dataset/data.json
