@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$216000$sFC3ksmAhMzk$jq5i98lFJVpXHC79h0ign/ez7AfyJVI41DF57+Jn7Js=",
-        "last_login": "2021-02-25T15:10:42.504Z",
+        "last_login": "2021-03-18T07:35:11.410Z",
         "is_superuser": true,
         "username": "duc",
         "first_name": "",
@@ -42,13 +42,97 @@
     }
 },
 {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$216000$Nie1Wb9CPqQU$bIPIFwBfhy065KcxeNe2gkR9xOky41IoCl55m5cJ4fA=",
+        "last_login": "2021-03-18T07:37:09.894Z",
+        "is_superuser": false,
+        "username": "tranghi",
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-03-18T07:34:41.555Z",
+        "email": "ntthutrang0906@gmail.com",
+        "phone": null,
+        "avatar": null,
+        "gender": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$216000$wwgnhi3vGJy1$cef7RMSu/YDqbUyQ0Eg07UaB3OUsI9JK7fBHSOuA6lc=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "trandinhxu",
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": false,
+        "date_joined": "2021-03-20T01:53:04.827Z",
+        "email": "trandinhxu83@gmail.com",
+        "phone": null,
+        "avatar": null,
+        "gender": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$216000$jmwLWHoEGouD$pwwBPTehholtYPSztCSgetTQqhuMYn8wJlbJv+qJ63Y=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "trandinhxu85",
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-03-20T03:08:37.413Z",
+        "email": "trandinhxu85@gmail.com",
+        "phone": null,
+        "avatar": null,
+        "gender": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.user",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$216000$162jL72tWEuD$JrmLFO3n6qKIicoYowCRRebr08N5AbaDYeklllbIxoY=",
+        "last_login": "2021-03-20T03:31:40.219Z",
+        "is_superuser": false,
+        "username": "testaccount",
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-03-20T03:31:18.531Z",
+        "email": "testaccount@gmail.com",
+        "phone": null,
+        "avatar": null,
+        "gender": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
     "model": "items.item",
     "pk": "4ab5eef0-2563-41e2-9c91-764f27f5be7b",
     "fields": {
         "created_date": "2021-02-28T08:42:57.137Z",
-        "modified_date": "2021-02-28T08:42:57.137Z",
+        "modified_date": "2021-03-17T08:43:41.359Z",
         "name": "Bán nhà đất hẻm Bình Giã Quận Tân Bình diện tích 13x35m, hiện đang đất trống",
-        "address": null,
+        "address": "94530171-e5d5-48da-996f-2cdc7f83bfc7",
         "description": "Chính chủ bán đất hẻm đường Bình Giã Phường 12, Quận Tân Bình.\r\n- DT: 13x35m công nhận 440m2.\r\n- Vị trí thông Cộng Hòa - Trường Chinh.\r\n- Giá tốt 41.5 tỷ",
         "price": 41000000000,
         "image": "https://file4.batdongsan.com.vn/2021/02/21/20210221143105-a07c_wm.jpg",
@@ -87,6 +171,17 @@
         "created_by": 1,
         "view_count": 0,
         "status": "A"
+    }
+},
+{
+    "model": "comments.comment",
+    "pk": "14d534f4-4712-43e5-a757-db1f45dedf3a",
+    "fields": {
+        "created_date": "2021-03-20T06:31:54.548Z",
+        "modified_date": "2021-03-20T06:31:54.548Z",
+        "written_by": null,
+        "for_item": "dd11ef9a-e91c-4e21-86b3-c98b6bedfa9f",
+        "text": "Dat gia re nhat"
     }
 },
 {
@@ -139,7 +234,8 @@
     "fields": {
         "created_date": "2021-02-28T08:50:03.798Z",
         "modified_date": "2021-02-28T08:50:03.798Z",
-        "name": "Long An"
+        "name": "Long An",
+        "description": null
     }
 },
 {
@@ -148,7 +244,8 @@
     "fields": {
         "created_date": "2021-02-28T08:49:54.959Z",
         "modified_date": "2021-02-28T08:49:54.959Z",
-        "name": "Dong Nai"
+        "name": "Dong Nai",
+        "description": null
     }
 },
 {
@@ -157,7 +254,8 @@
     "fields": {
         "created_date": "2021-02-28T08:50:13.011Z",
         "modified_date": "2021-02-28T08:50:13.011Z",
-        "name": "Nha Trang"
+        "name": "Nha Trang",
+        "description": null
     }
 },
 {
@@ -167,6 +265,7 @@
         "created_date": "2021-02-28T08:51:02.157Z",
         "modified_date": "2021-02-28T08:51:02.157Z",
         "name": "My Duc",
+        "description": null,
         "province": "b6206092-6f95-4bfc-9452-01000a324e82"
     }
 },
@@ -177,6 +276,7 @@
         "created_date": "2021-02-28T08:50:44.228Z",
         "modified_date": "2021-02-28T08:50:44.228Z",
         "name": "Can Giooc",
+        "description": null,
         "province": "6681e5ca-2dad-4310-96dc-2a1453856b8b"
     }
 },
@@ -187,7 +287,20 @@
         "created_date": "2021-02-28T08:50:32.942Z",
         "modified_date": "2021-02-28T08:50:32.942Z",
         "name": "Long Thanh",
+        "description": null,
         "province": "a440034e-1fb1-4aef-b6b0-fae22d670f73"
+    }
+},
+{
+    "model": "addresses.ward",
+    "pk": "045cdd3b-02d1-4948-9ebf-81a9166aa24c",
+    "fields": {
+        "created_date": "2021-03-18T08:30:46.182Z",
+        "modified_date": "2021-03-18T08:30:46.182Z",
+        "name": "Long Tan",
+        "province": "a440034e-1fb1-4aef-b6b0-fae22d670f73",
+        "district": "b8a2282d-5c31-4fe1-94ee-4e3e7459ee4f",
+        "description": "Gia dat rat cao o day. k nen mua"
     }
 },
 {
@@ -198,7 +311,8 @@
         "modified_date": "2021-02-28T08:51:18.140Z",
         "name": "Vinh Thanh",
         "province": "a440034e-1fb1-4aef-b6b0-fae22d670f73",
-        "district": "b8a2282d-5c31-4fe1-94ee-4e3e7459ee4f"
+        "district": "b8a2282d-5c31-4fe1-94ee-4e3e7459ee4f",
+        "description": null
     }
 },
 {
@@ -212,6 +326,22 @@
         "district": "b8a2282d-5c31-4fe1-94ee-4e3e7459ee4f",
         "ward": "7666e6da-4b62-4b69-a9c9-d9c8377450e0",
         "description": "Vao hem 10 km, hoi nha ong 3 A"
+    }
+},
+{
+    "model": "authtoken.token",
+    "pk": "0a10adc3214a881bc61c79448255f7a389e5a3c0",
+    "fields": {
+        "user": 6,
+        "created": "2021-03-20T03:31:40.192Z"
+    }
+},
+{
+    "model": "authtoken.token",
+    "pk": "5635d2877e86bfd49fac41eef6e5fba5e1d126fb",
+    "fields": {
+        "user": 3,
+        "created": "2021-03-18T07:37:09.876Z"
     }
 }
 ]
