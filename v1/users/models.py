@@ -17,6 +17,8 @@ class User(AbstractUser):
         choices=GenderChoices,
         null=True
     )
+    EMAIL_FIELD = "email"
+    USERNAME_FIELD = "username"
 
     class Meta:
         ordering = ['username']
