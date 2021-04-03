@@ -1,9 +1,9 @@
-from rest_framework.serializers import HyperlinkedModelSerializer
+from rest_framework.serializers import ModelSerializer
 
 from v1.items.models import Item
 
 
-class ItemSerializer(HyperlinkedModelSerializer):
+class ItemSerializer(ModelSerializer):
     class Meta:
         model = Item
         fields = '__all__'

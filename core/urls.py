@@ -10,6 +10,7 @@ from v1.addresses.urls import router as address_router
 router = routers.DefaultRouter()
 
 router.registry.extend(user_router.registry)
+print(f"DUCCC {user_router.registry}")
 router.registry.extend(item_router.registry)
 router.registry.extend(comment_router.registry)
 router.registry.extend(address_router.registry)
@@ -18,7 +19,7 @@ router.registry.extend(address_router.registry)
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(router.urls)),
+    path('v1/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^authen/', include('djoser.urls')),
     url(r'^authen/', include('djoser.urls.authtoken')),
