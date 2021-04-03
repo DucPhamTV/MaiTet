@@ -1,0 +1,14 @@
+version: '3.2'
+
+services:
+  backend:
+    build:
+      dockerfile: docker/backend/Dockerfile
+      context: .
+    environment:
+      - SECRET_KEY=eaglewarrior
+    entrypoint: /app/docker/backend/wsgi-entrypoint.sh
+    volumes:
+      - .:/app
+    ports:
+      - 8000:8000
