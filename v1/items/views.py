@@ -12,8 +12,6 @@ class ItemViewSet(ModelViewSet):
     """
     This viewset automatically provides `list`, `create`, `retrieve`,
     `update` and `destroy` actions.
-
-    Additionally we also provide an extra `highlight` action.
     """
     queryset = Item.objects.all()
     serializer_class = ItemSerializer
