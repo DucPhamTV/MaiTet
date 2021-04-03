@@ -7,3 +7,9 @@ class ItemSerializer(ModelSerializer):
     class Meta:
         model = Item
         fields = '__all__'
+        read_only_fields = (
+            'uuid',
+            'created_by',
+            'created_date',
+            'modified_date',
+        )

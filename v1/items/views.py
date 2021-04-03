@@ -18,3 +18,8 @@ class ItemViewSet(ModelViewSet):
     queryset = Item.objects.all()
     serializer_class = ItemSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    def perform_create(self, serializer):
+        serializer.save(created_by=self.request.user)
+
+    def get_queryset(self):
+        return self.queryset.filter(created_by=self.request.user)
