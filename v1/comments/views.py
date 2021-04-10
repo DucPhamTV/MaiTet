@@ -20,5 +20,8 @@ class CommentViewSet(ModelViewSet):
         serializer.save(written_by=self.request.user)
 
     def get_queryset(self):
+        if self.request.user.is_anonymous:
+            return self.queryset
+
         return self.queryset.filter(written_by=self.request.user)
 

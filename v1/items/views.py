@@ -20,4 +20,7 @@ class ItemViewSet(ModelViewSet):
         serializer.save(created_by=self.request.user)
 
     def get_queryset(self):
+        if self.request.user.is_anonymous:
+            return self.queryset
+
         return self.queryset.filter(created_by=self.request.user)
