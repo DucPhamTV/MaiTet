@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$216000$sFC3ksmAhMzk$jq5i98lFJVpXHC79h0ign/ez7AfyJVI41DF57+Jn7Js=",
-        "last_login": "2021-03-18T07:35:11.410Z",
+        "last_login": "2021-04-03T12:55:26.545Z",
         "is_superuser": true,
         "username": "duc",
         "first_name": "",
@@ -186,6 +186,28 @@
 },
 {
     "model": "comments.comment",
+    "pk": "403f990c-0670-49b9-9deb-b038c480eb13",
+    "fields": {
+        "created_date": "2021-03-20T08:32:17.735Z",
+        "modified_date": "2021-03-20T08:32:17.735Z",
+        "written_by": null,
+        "for_item": "dd11ef9a-e91c-4e21-86b3-c98b6bedfa9f",
+        "text": "Dat gia re tam"
+    }
+},
+{
+    "model": "comments.comment",
+    "pk": "4bf23bae-0a01-4109-9f5a-c45455429b1b",
+    "fields": {
+        "created_date": "2021-03-20T08:33:59.370Z",
+        "modified_date": "2021-03-20T08:33:59.370Z",
+        "written_by": null,
+        "for_item": "dd11ef9a-e91c-4e21-86b3-c98b6bedfa9f",
+        "text": "Dat gia re tu"
+    }
+},
+{
+    "model": "comments.comment",
     "pk": "4e7b985c-8809-4c3c-8641-fbde2f52b3bb",
     "fields": {
         "created_date": "2021-02-28T08:48:06.305Z",
@@ -193,6 +215,28 @@
         "written_by": 2,
         "for_item": "ded5fe7d-c6b4-4d1b-8331-9522de897580",
         "text": "Chính chủ bán gấp căn hộ chung cư VOV Lương Thế Vinh, gần khu đô thị Greenbay Mế Trì.\r\n- Diện tích 60 m2 gồm 02 phòng ngủ, 01 vệ sinh, 01 khách, 01 bếp.\r\n- Căn tầng trung, thoáng mát, Rộng rãi. Có khuôn viên rộng rãi, có bể bơi, sân tennis...\r\n- Nội thất đầy đủ: giường, tủ, sàn gỗ, điều hòa, nóng lạnh, tủ bếp....\r\n- Vị trí giao thông thuận tiện, gần ngã tư Lê Văn Lương, trường công cấp 1,2,3..., gần bệnh viện Y học cổ truyền...\r\n- Tiện ích tòa nhà: siêu thị, cafe, nhà thuốc, nhà sách.....\r\n- Vị trí giao thông thuận tiện, thông sang Đường Đại Lộ Thăng Long, Trần Duy Hưng, Thông sang ngã tư Khuất Duy Tiến...."
+    }
+},
+{
+    "model": "comments.comment",
+    "pk": "574ee92f-95d1-4dfd-b53d-4206222781a3",
+    "fields": {
+        "created_date": "2021-03-20T08:30:14.847Z",
+        "modified_date": "2021-03-20T08:30:14.847Z",
+        "written_by": null,
+        "for_item": "dd11ef9a-e91c-4e21-86b3-c98b6bedfa9f",
+        "text": "Dat gia re nhi"
+    }
+},
+{
+    "model": "comments.comment",
+    "pk": "920d5378-0cca-4c13-99d9-3938cc30f8a5",
+    "fields": {
+        "created_date": "2021-03-20T08:40:31.645Z",
+        "modified_date": "2021-03-20T08:40:31.645Z",
+        "written_by": null,
+        "for_item": "dd11ef9a-e91c-4e21-86b3-c98b6bedfa9f",
+        "text": "Dat gia re tngu,"
     }
 },
 {
@@ -226,6 +270,17 @@
         "written_by": 1,
         "for_item": "4ab5eef0-2563-41e2-9c91-764f27f5be7b",
         "text": "Giảm giá tí đi bác, em xúc liền."
+    }
+},
+{
+    "model": "comments.comment",
+    "pk": "d64b2e8e-425f-4b2c-8336-46445636f78c",
+    "fields": {
+        "created_date": "2021-03-20T08:45:23.620Z",
+        "modified_date": "2021-03-20T08:45:23.620Z",
+        "written_by": null,
+        "for_item": "dd11ef9a-e91c-4e21-86b3-c98b6bedfa9f",
+        "text": "Dat gia re luc"
     }
 },
 {
@@ -329,6 +384,510 @@
     }
 },
 {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 1,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 1,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 1,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 1,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add item",
+        "content_type": 2,
+        "codename": "add_item"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change item",
+        "content_type": 2,
+        "codename": "change_item"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete item",
+        "content_type": 2,
+        "codename": "delete_item"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view item",
+        "content_type": 2,
+        "codename": "view_item"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add comment",
+        "content_type": 3,
+        "codename": "add_comment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change comment",
+        "content_type": 3,
+        "codename": "change_comment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete comment",
+        "content_type": 3,
+        "codename": "delete_comment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view comment",
+        "content_type": 3,
+        "codename": "view_comment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add district",
+        "content_type": 4,
+        "codename": "add_district"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change district",
+        "content_type": 4,
+        "codename": "change_district"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete district",
+        "content_type": 4,
+        "codename": "delete_district"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view district",
+        "content_type": 4,
+        "codename": "view_district"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add province",
+        "content_type": 5,
+        "codename": "add_province"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change province",
+        "content_type": 5,
+        "codename": "change_province"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete province",
+        "content_type": 5,
+        "codename": "delete_province"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view province",
+        "content_type": 5,
+        "codename": "view_province"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add ward",
+        "content_type": 6,
+        "codename": "add_ward"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change ward",
+        "content_type": 6,
+        "codename": "change_ward"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete ward",
+        "content_type": 6,
+        "codename": "delete_ward"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view ward",
+        "content_type": 6,
+        "codename": "view_ward"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add address",
+        "content_type": 7,
+        "codename": "add_address"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change address",
+        "content_type": 7,
+        "codename": "change_address"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete address",
+        "content_type": 7,
+        "codename": "delete_address"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view address",
+        "content_type": 7,
+        "codename": "view_address"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 8,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 8,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 8,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 8,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 9,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 9,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 9,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 9,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 10,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 10,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 10,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 10,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 11,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 11,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 11,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 11,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 12,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 12,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 12,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 12,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+        "name": "Can add Token",
+        "content_type": 13,
+        "codename": "add_token"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+        "name": "Can change Token",
+        "content_type": 13,
+        "codename": "change_token"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+        "name": "Can delete Token",
+        "content_type": 13,
+        "codename": "delete_token"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+        "name": "Can view Token",
+        "content_type": 13,
+        "codename": "view_token"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+        "name": "Can add token",
+        "content_type": 14,
+        "codename": "add_tokenproxy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+        "name": "Can change token",
+        "content_type": 14,
+        "codename": "change_tokenproxy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+        "name": "Can delete token",
+        "content_type": 14,
+        "codename": "delete_tokenproxy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+        "name": "Can view token",
+        "content_type": 14,
+        "codename": "view_tokenproxy"
+    }
+},
+{
     "model": "authtoken.token",
     "pk": "0a10adc3214a881bc61c79448255f7a389e5a3c0",
     "fields": {
@@ -342,6 +901,14 @@
     "fields": {
         "user": 3,
         "created": "2021-03-18T07:37:09.876Z"
+    }
+},
+{
+    "model": "authtoken.token",
+    "pk": "dcdb444065682a2f41d43c5c31746cfac6ec4b46",
+    "fields": {
+        "user": 1,
+        "created": "2021-04-03T12:55:26.529Z"
     }
 }
 ]
