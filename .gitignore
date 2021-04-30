@@ -130,3 +130,5 @@ dmypy.json
 
 # customize requirements file
 #requirements/*.txt
+static/
+.idea/

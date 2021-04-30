@@ -9,7 +9,8 @@ class User(AbstractUser):
         ('F', 'Female'),
         ('N', 'Don\'t Specify'),
     ]
-    email = models.EmailField(verbose_name='email', unique=True, max_length=255)
+    email = models.EmailField(verbose_name='email', unique=True,
+                              blank=False, null=False, max_length=255)
     phone = models.CharField(null=True, max_length=50)
     avatar = models.URLField(blank=True, null=True)
     gender = models.CharField(
@@ -17,6 +18,8 @@ class User(AbstractUser):
         choices=GenderChoices,
         null=True
     )
+    EMAIL_FIELD = "email"
+    USERNAME_FIELD = "username"
 
     class Meta:
         ordering = ['username']
