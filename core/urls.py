@@ -1,6 +1,5 @@
 from django.contrib import admin
 from django.urls import include, path
-from django.conf.urls import re_path
 from rest_framework import routers
 from v1.users.urls import user_urlpatterns
 from v1.items.urls import router as item_router
