@@ -7,6 +7,9 @@ import { createBrowserHistory } from "history";
 import { applyMiddleware, createStore } from "redux";
 import { routerMiddleware, ConnectedRouter } from "connected-react-router";
 
+import { setCurrentUser, setToken } from "./components/login/LoginActions";
+import { isEmpty } from "./utils/Utils";
+
 import rootReducer from "./Reducer";
 
 const Root = ({ children, initialState = {} }) => {
@@ -18,7 +21,14 @@ const Root = ({ children, initialState = {} }) => {
     initialState,
     applyMiddleware(...middleware)
   );
-
+  // check localStorage
+  if (!isEmpty(localStorage.getItem("token"))) {
+    store.dispatch(setToken(localStorage.getItem("token")));
+  }
+  if (!isEmpty(localStorage.getItem("user"))) {
+    const user = JSON.parse(localStorage.getItem("user"));
+    store.dispatch(setCurrentUser(user, ""));
+  }
   return (
     <Provider store={store}>
       <ConnectedRouter history={history}>{children}</ConnectedRouter>

@@ -7,7 +7,12 @@ import {
       Form,
       FormControl
 } from "react-bootstrap";
+import { withRouter } from "react-router-dom"; // new import
+import { connect } from "react-redux"; // new import
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+
+import { signupNewUser } from "./SignupActions";
 
 
 class Signup extends Component {
@@ -15,6 +20,7 @@ class Signup extends Component {
     super(props);
     this.state = {
       username: "",
+      email: "",
       password: ""
     };
   }
@@ -25,9 +31,10 @@ class Signup extends Component {
   onSignupClick = () => {
     const userData = {
       username: this.state.username,
+      email: this.state.email,
       password: this.state.password
     };
-    console.log("Sign up " + userData.username + " " + userData.password);
+    this.props.signupNewUser(userData); // <-- signup new user request
   };
 
   render() {
@@ -48,7 +55,17 @@ class Signup extends Component {
                 />
                 <FormControl.Feedback type="invalid"></FormControl.Feedback>
               </Form.Group>
-
+              <Form.Group controlId="emailId">
+                <Form.Label>Email</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="email"
+                  placeholder="Enter email"
+                  value={this.state.email}
+                  onChange={this.onChange}
+                />
+                <FormControl.Feedback type="invalid"></FormControl.Feedback>
+              </Form.Group>
               <Form.Group controlId="passwordId">
                 <Form.Label>Your password</Form.Label>
                 <Form.Control
@@ -75,4 +92,15 @@ class Signup extends Component {
   }
 }
 
-export default Signup;
+Signup.propTypes = {
+  signupNewUser: PropTypes.func.isRequired,
+  createUser: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  createUser: state.createUser
+});
+
+export default connect(mapStateToProps, {
+  signupNewUser
+})(withRouter(Signup));
