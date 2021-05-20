@@ -18,6 +18,7 @@ class User(AbstractUser):
         choices=GenderChoices,
         null=True
     )
+    REQUIRED_FIELDS = ['email', 'phone', 'avatar', 'gender']
     EMAIL_FIELD = "email"
     USERNAME_FIELD = "username"
 
