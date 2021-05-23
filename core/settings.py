@@ -33,10 +33,10 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'v1.users',
-    'v1.items',
-    'v1.comments',
-    'v1.addresses',
+    'v1.users.apps.UsersConfig',
+    'v1.items.apps.ItemsConfig',
+    'v1.comments.apps.CommentsConfig',
+    'v1.addresses.apps.AddressesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
