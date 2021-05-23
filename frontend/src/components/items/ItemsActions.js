@@ -16,7 +16,7 @@ export const getItems = () => dispatch => {
         });
 };
 
-export const addItems = item => dispatch => {
+export const addItem = item => dispatch => {
     axios
         .post("v1/items/", item)
         .then(response => {
