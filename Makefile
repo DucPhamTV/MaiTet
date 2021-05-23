@@ -24,4 +24,4 @@ test: env
 
 .PHONY: check
 check: env
-	env/bin/flake8 .
+	env/bin/flake8 . --exclude env/
