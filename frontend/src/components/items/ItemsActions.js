@@ -6,9 +6,10 @@ export const getItems = () => dispatch => {
     axios
         .get("/v1/items/")
         .then(response => {
+	    console.log(response);
             dispatch({
                 type: GET_ITEMS,
-                payload: response.data,
+                payload: response.data.results,
             });
         })
         .catch(error => {

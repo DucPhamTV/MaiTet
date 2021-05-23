@@ -9,12 +9,12 @@ export const itemsReducer = (state = initialState, action) => {
         case GET_ITEMS:
             return {
                 ...state,
-                notes: action.payload,
+                items: action.payload,
             };
         case ADD_ITEM:
             return {
                 ...state,
-                notes: [...state.notes, action.payload],
+                items: [...state.items, action.payload],
             };
         default:
             return state;

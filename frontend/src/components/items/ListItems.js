@@ -12,8 +12,9 @@ class ListItems extends Component {
   }
 
   render() {
+    console.log(`DUC {this.props}`);
     const { items } = this.props.items;
-
+    console.log(`DUC {items}`);
     if (items.length === 0) {
       return <h2>Please add your first item</h2>;
     }

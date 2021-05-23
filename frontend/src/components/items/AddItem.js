@@ -1,4 +1,4 @@
-// frontend/src/components/notes/AddNote.js
+// frontend/src/components/items/AddItem.js
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
