@@ -8,9 +8,9 @@ asgiref==3.3.4
     # via
     #   django
     #   djoser
-attrs==20.3.0
+attrs==21.2.0
     # via pytest
-certifi==2020.12.5
+certifi==2021.5.30
     # via requests
 cffi==1.14.5
     # via cryptography
@@ -30,12 +30,12 @@ django-cors-headers==3.7.0
     # via -r requirements/base.in
 django-templated-mail==1.1.1
     # via djoser
-django==3.2
+django==3.2.4
     # via
     #   django-cors-headers
     #   djangorestframework
     #   djangorestframework-simplejwt
-djangorestframework-simplejwt==4.6.0
+djangorestframework-simplejwt==4.7.1
     # via
     #   -r requirements/base.in
     #   djoser
@@ -45,7 +45,7 @@ djangorestframework==3.12.4
     #   djangorestframework-simplejwt
 djoser==2.1.0
     # via -r requirements/base.in
-flake8==3.9.1
+flake8==3.9.2
     # via -r requirements/development.in
 idna==2.10
     # via requests
@@ -53,13 +53,13 @@ iniconfig==1.1.1
     # via pytest
 itypes==1.2.0
     # via coreapi
-jinja2==2.11.3
+jinja2==3.0.1
     # via coreschema
-markupsafe==1.1.1
+markupsafe==2.0.1
     # via jinja2
 mccabe==0.6.1
     # via flake8
-oauthlib==3.1.0
+oauthlib==3.1.1
     # via
     #   requests-oauthlib
     #   social-auth-core
@@ -81,7 +81,7 @@ pyjwt==2.1.0
     #   social-auth-core
 pyparsing==2.4.7
     # via packaging
-pytest==6.2.3
+pytest==6.2.4
     # via -r requirements/development.in
 python-dotenv==0.17.1
     # via -r requirements/base.in
@@ -96,7 +96,7 @@ requests==2.25.1
     #   coreapi
     #   requests-oauthlib
     #   social-auth-core
-six==1.15.0
+six==1.16.0
     # via social-auth-app-django
 social-auth-app-django==4.0.0
     # via djoser
@@ -108,5 +108,5 @@ toml==0.10.2
     # via pytest
 uritemplate==3.0.1
     # via coreapi
-urllib3==1.26.4
+urllib3==1.26.5
     # via requests
