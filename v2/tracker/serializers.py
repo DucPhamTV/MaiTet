@@ -1,8 +1,9 @@
-from rest_framework.serializers import ModelSerializer
+from rest_framework.serializers import ModelSerializer, SlugRelatedField
 
 from v2.tracker.models import Tracker
 
 class TrackerSerializer(ModelSerializer):
+    created_by = SlugRelatedField(read_only=True, slug_field='username')
     class Meta:
         model = Tracker
         fields = '__all__'
