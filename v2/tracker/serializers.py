@@ -1,6 +1,7 @@
 from rest_framework.serializers import ModelSerializer, SlugRelatedField
 
 from v2.tracker.models import Tracker
+from v2.tracker.tasks import crawl
 
 class TrackerSerializer(ModelSerializer):
     created_by = SlugRelatedField(read_only=True, slug_field='username')
@@ -14,3 +15,9 @@ class TrackerSerializer(ModelSerializer):
             'status',
             'created_by',
         )
+
+    def create(self, validated_data):
+        print(validated_data)
+        instance = super().create(validated_data)
+        crawl.delay(instance.uuid, instance.url, instance.target)
+        return instance
