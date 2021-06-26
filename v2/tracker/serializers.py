@@ -15,9 +15,10 @@ class TrackerSerializer(ModelSerializer):
             'status',
             'created_by',
         )
+        ordering = ['-modified_date']
 
     def create(self, validated_data):
         print(validated_data)
         instance = super().create(validated_data)
-        crawl.delay(instance.uuid, instance.url, instance.target)
+        crawl.delay(instance.uuid)
         return instance

@@ -24,4 +24,4 @@ class Tracker(CreatedModified):
         on_delete=models.CASCADE, blank=False, null=False)
     
     def __str__(self):
-        return f"{self.track_id} | {self.description}"
+        return f"{self.uuid} | {self.description} | {self.url[:20]} | {self.status}"
