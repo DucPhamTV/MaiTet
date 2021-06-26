@@ -22,6 +22,7 @@ class Tracker(CreatedModified):
     created_by = models.ForeignKey(
         User, related_name='create_user',
         on_delete=models.CASCADE, blank=False, null=False)
-    
+    check_interval = models.IntegerField(null=True)
+    webhook = models.URLField(max_length=200, null=True)
     def __str__(self):
         return f"{self.uuid} | {self.description} | {self.url[:20]} | {self.status}"
