@@ -40,8 +40,8 @@ class SimpleCrawler:
     def run(self):
         # TODO: Implement caching
         headers = {"User-Agent": "Mozilla/5.0"}
-        response = requests.get(self.url, headers=EXTRA_HEADERS, verify=False)
-        print(f"Response: {response.text}")
+        response = requests.get(self.url, headers=EXTRA_HEADERS)
+        #print(f"Response: {response.text}")
         response.raise_for_status()
 
         return response

@@ -13,7 +13,7 @@ import Dashboard from "./components/dashboard/Dashboard";
 
 import requireAuth from "./utils/RequireAuth";
 
-axios.defaults.baseURL = "http://127.0.0.1:8000";
+axios.defaults.baseURL = "http://192.168.1.12:8000";
 
 class App extends Component {
   render() {

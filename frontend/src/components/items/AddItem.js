@@ -10,9 +10,9 @@ class AddItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
       description: "",
-      price: 0
+      url: "",
+      target: "",
     };
   }
   onChange = e => {
@@ -22,8 +22,8 @@ class AddItem extends Component {
   onAddClick = () => {
     const item = {
       description: this.state.description,
-      name: this.state.name,
-      price: this.state.price,
+      url: this.state.url,
+      target: this.state.target,
     };
     this.props.addItem(item);
   };
@@ -38,24 +38,24 @@ class AddItem extends Component {
             <Form.Control
               as="textarea"
               rows={3}
-              name="name"
-              placeholder="Enter name"
+              name="description"
+              placeholder="Enter description"
               value={this.name}
               onChange={this.onChange}
             />
             <Form.Control
               as="textarea"
               rows={3}
-              name="description"
-              placeholder="Enter description"
+              name="url"
+              placeholder="Enter URL"
               value={this.description}
               onChange={this.onChange}
             />
             <Form.Control
               as="textarea"
               rows={3}
-              name="price"
-              placeholder="Enter price"
+              name="target"
+              placeholder="Enter target"
               value={this.content}
               onChange={this.onChange}
             />

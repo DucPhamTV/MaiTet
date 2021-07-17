@@ -1,3 +1,5 @@
+from io import StringIO
+
 from lxml import etree
 
 
@@ -8,8 +10,7 @@ class LxmlParser:
     @staticmethod
     def xpath(html, xpath):
         parser = etree.HTMLParser()
-        tree = etree.parse(html, parser)
+        tree = etree.parse(StringIO(html), parser)
         result = tree.xpath(xpath)
-        print(result)
 
         return result
