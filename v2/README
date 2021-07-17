@@ -1,2 +1,7 @@
 This version I intent to make price tracker app.
 It still uses the same user authentication flow as v1.
+
+This app need celery worker and redis to distribute tasks
+
+1. start redis container by `docker run --name maitet-redis -p 6379:6379 -d redis`. If the container was started, just need to start it again `docker start maitet-redis`
+2. start celery worker by `celery --app core worker -l DEBUG`

@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import axios from "axios";
+import { Container, Navbar, Nav } from "react-bootstrap";
 
 import Root from "./Root";
 import Home from "./components/home/Home";
@@ -18,6 +19,16 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Navbar bg="dark" variant="dark">
+          <Container>
+          <Navbar.Brand href="/">Home</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="/dashboard">Home</Nav.Link>
+            <Nav.Link href="/signup">Sign up</Nav.Link>
+            <Nav.Link href="/login">Login</Nav.Link>
+          </Nav>
+          </Container>
+        </Navbar>
         <Root>
           <Switch>
             <Route path="/signup" component={Signup} />

@@ -11,5 +11,5 @@ def crawl(tracker_id):
     print(f"Tracker info: {tracker}")
     crawler = Factory.create_crawler(tracker.url)
     response = crawler.run()
-    result = LxmlParser(response.text, tracker.xpath)
+    result = LxmlParser.xpath(response.text, tracker.target)
     print(f"Crawl result: {result}")

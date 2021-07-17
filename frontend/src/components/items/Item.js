@@ -11,24 +11,27 @@ class Item extends Component {
         const { item } = this.props;
         this.props.deleteItem(item.uuid);
     };
-    onIncreasePrice = () => {
-        const { item } = this.props;
-        item.price += 1000000;
-        this.props.updateItem(item.uuid, item);
-    };
+    // onIncreasePrice = () => {
+    //     const { item } = this.props;
+    //     item.price += 1000000;
+    //     this.props.updateItem(item.uuid, item);
+    // };
     render() {
         const { item } = this.props;
         return (
             <>
                 <div>
-                    <p>{item.name}</p>
+                    <p>{item.description}</p>
+                    <p>Create by: {item.created_by}</p>
+                    <p>Status: {item.status}</p>
+                    <p>URL: {item.url}</p>
                 </div>
                 <Button variant="danger" size="sm" onClick={this.onDeleteClick}>
                     Delete
                 </Button>
-                <Button variant="info" size="sm" onClick={this.onIncreasePrice}>
+                {/* <Button variant="info" size="sm" onClick={this.onIncreasePrice}>
                     Increase price
-                </Button>
+                </Button> */}
             </>
         );
     }
