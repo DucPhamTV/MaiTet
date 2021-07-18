@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'v1.comments.apps.CommentsConfig',
     'v1.addresses.apps.AddressesConfig',
     'v2.tracker.apps.TrackerConfig',
+    'v2.results.apps.ResultsConfig',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
