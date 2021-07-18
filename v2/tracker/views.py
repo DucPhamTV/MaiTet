@@ -4,6 +4,7 @@ from rest_framework.viewsets import ModelViewSet
 from v2.tracker.serializers import TrackerSerializer
 from v2.tracker.models import Tracker
 
+
 # Create your views here.
 class TrackerViewSet(ModelViewSet):
     """
@@ -22,4 +23,3 @@ class TrackerViewSet(ModelViewSet):
             return self.queryset
 
         return self.queryset.filter(created_by=self.request.user)
-

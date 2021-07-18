@@ -7,6 +7,7 @@ from rest_framework.serializers import (
 from v2.tracker.models import Tracker
 from v2.tracker.tasks import crawl
 
+
 class TrackerSerializer(ModelSerializer):
     created_by = SlugRelatedField(read_only=True, slug_field='username')
     result = HyperlinkedRelatedField(
@@ -14,6 +15,7 @@ class TrackerSerializer(ModelSerializer):
         read_only=True,
         view_name='result-detail',
     )
+
     class Meta:
         model = Tracker
         fields = (

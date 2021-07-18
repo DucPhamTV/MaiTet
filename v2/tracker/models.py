@@ -1,5 +1,3 @@
-from uuid import uuid4
-
 from django.db import models
 
 # Create your models here.
@@ -24,5 +22,6 @@ class Tracker(CreatedModified):
         on_delete=models.CASCADE, blank=False, null=False)
     check_interval = models.IntegerField(null=True)
     webhook = models.URLField(max_length=200, null=True)
+
     def __str__(self):
         return f"{self.uuid} | {self.description} | {self.url[:20]} | {self.status}"

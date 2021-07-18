@@ -1,10 +1,7 @@
-from uuid import uuid4
-
 from django.db import models
 
 # Create your models here.
 from v1.commons.models.created_modified import CreatedModified
-from v1.users.models import User
 from v2.tracker.models import Tracker
 
 
