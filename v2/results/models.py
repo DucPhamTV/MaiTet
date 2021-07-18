@@ -9,7 +9,7 @@ from v2.tracker.models import Tracker
 
 
 class Result(CreatedModified):
-    tracker = models.ForeignKey(Tracker, on_delete=models.CASCADE)
+    tracker = models.ForeignKey(Tracker, related_name='result', on_delete=models.CASCADE)
     value = models.TextField(max_length=2000)
 
     def __str__(self):
