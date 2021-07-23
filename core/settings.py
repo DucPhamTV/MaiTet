@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'v1.items.apps.ItemsConfig',
     'v1.comments.apps.CommentsConfig',
     'v1.addresses.apps.AddressesConfig',
+    'v2.tracker.apps.TrackerConfig',
+    'v2.results.apps.ResultsConfig',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -64,6 +67,7 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
     "http://localhost:3000",
+    "http://192.168.1.12:3000",
 ]
 # CORS_ALLOW_ALL_ORIGINS = True
 ROOT_URLCONF = 'core.urls'
@@ -97,6 +101,12 @@ DATABASES = {
     }
 }
 
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_WORKER_CONCURRENCY = 1
+CELERY_BROKER_URL = f'redis://{os.getenv("REDIS_HOST", "localhost")}:6379/{os.getenv("REDIS_DB", "")}'
+CELERY_RESULT_BACKEND = f'redis://{os.getenv("REDIS_HOST", "localhost")}:6379/{os.getenv("REDIS_DB", "")}'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
