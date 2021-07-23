@@ -7,5 +7,4 @@ class ResultSerializer(ModelSerializer):
     class Meta:
         model = Result
         fields = '__all__'
-        read_only_fields = '__all__'
         ordering = ['-modified_date']
