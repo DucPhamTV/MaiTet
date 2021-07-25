@@ -1,3 +1,4 @@
+from rest_framework_nested.relations import NestedHyperlinkedRelatedField
 from rest_framework.serializers import (
     ModelSerializer,
     SlugRelatedField,
@@ -10,10 +11,17 @@ from v2.tracker.tasks import crawl
 
 class TrackerSerializer(ModelSerializer):
     created_by = SlugRelatedField(read_only=True, slug_field='username')
-    result = HyperlinkedRelatedField(
+    # Change to nested relationship
+    # result = HyperlinkedRelatedField(
+    #     many=True,
+    #     read_only=True,
+    #     view_name='results-detail',
+    # )
+    result = NestedHyperlinkedRelatedField(
         many=True,
         read_only=True,
-        view_name='result-detail',
+        view_name='tracker-results-detail',
+        parent_lookup_kwargs={'tracker_pk': 'tracker__pk'},
     )
 
     class Meta:

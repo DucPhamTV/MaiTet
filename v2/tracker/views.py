@@ -20,6 +20,7 @@ class TrackerViewSet(ModelViewSet):
 
     def get_queryset(self):
         if self.request.user.is_anonymous:
+            # For development, will be change to 401 Unauthorized.
             return self.queryset
 
         return self.queryset.filter(created_by=self.request.user)

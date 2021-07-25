@@ -9,8 +9,8 @@ from v2.results.models import Result
 class ResultViewSet(ReadOnlyModelViewSet):
     queryset = Result.objects.all()
     serializer_class = ResultSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
     def get_queryset(self):
         # return self.queryset.filter(tracker__pk=self.request.)
-        return self.queryset
+        return self.queryset.filter(tracker=self.kwargs['tracker_pk'])
