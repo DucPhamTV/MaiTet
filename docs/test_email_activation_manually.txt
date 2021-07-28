@@ -1,0 +1,25 @@
+
+# register new account at http://192.168.1.13:8000/api/v1/auth/users/
+
+# An email will be sent to your registered email
+
+```
+Content-Type: text/html; charset="utf-8"                                                                                                              
+MIME-Version: 1.0                                                                                                                                     
+Content-Transfer-Encoding: 7bit
+
+<p>You're receiving this email because you need to finish activation process on 192.168.1.13:8000.</p>
+
+<p>Please go to the following page to activate account:</p>
+<p><a href="http://192.168.1.13:8000/#/activate/NzE4ZjUzYjQtZWFhZi00MDUyLWIwMTMtYzdmMjI0NDBhNWZk/aqi4jc-e9792a8baaf3bd6d2064f419e721cf3d">http://192.1
+68.1.13:8000/#/activate/NzE4ZjUzYjQtZWFhZi00MDUyLWIwMTMtYzdmMjI0NDBhNWZk/aqi4jc-e9792a8baaf3bd6d2064f419e721cf3d</a></p>
+
+<p>Thanks for using our site!</p>
+
+<p>The 192.168.1.13:8000 team</p>
+--===============7121984195454761360==--
+```
+
+# Copy uid is NzE4ZjUzYjQtZWFhZi00MDUyLWIwMTMtYzdmMjI0NDBhNWZk, and token is aqi4jc-e9792a8baaf3bd6d2064f419e721cf3d to activate your account at http://192.168.1.13:8000/api/v1/auth/users/activation/
+
+# Finally, login at http://192.168.1.13:8000/api/v1/auth/token/login to retrive Token
